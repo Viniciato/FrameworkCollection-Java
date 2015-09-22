@@ -19,23 +19,31 @@ public class Main {
 
         while (it.hasNext()) {
             String name = it.next();
-            if (name.startsWith("B"))
+            if (name.startsWith("I"))
                 it.remove();
-            System.out.println(name);
+            else
+                System.out.println(name);
         }
+        System.out.println(mc.contains("Insano"));
+        //Teste para ver se contem dentro da collection a string
+        //pasada por parametro
 
-        it = mc.iterator();
 
-        System.out.println("------------");
 
-        while (it.hasNext()) {
 
-            System.out.println(it.next());
+//        it = mc.iterator();
+//
+//        System.out.println("------------");
+//
+//        while (it.hasNext()) {
+//
+//            System.out.println(it.next());
+//
+//        }
 
-        }
+
 //        it.remove();
 //        it.remove();
-//        System.out.println(mc.contains("Destruidor"));
 
 
     }

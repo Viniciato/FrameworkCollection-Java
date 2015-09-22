@@ -31,11 +31,14 @@ public class MyCollection extends BaseCollection {
 
 		@Override
 		public void remove() {
-			if (index % 2 == 0)
-				data.remove(count2--);
-			else
-				data.remove(data.size()-count1--);
-			index++;
+			if (count1 - count2 % 2 == 1) {
+				data.remove(count2-1);
+				count2--;
+			}
+			else{
+				data.remove(data.size()-(count1-1));
+				count1--;
+			}
 	}
 }
 }
