@@ -25,7 +25,5 @@ public class Main {
             else
                 System.out.println(name);
         }
-
-        it.remove();
     }
 }
