@@ -19,7 +19,7 @@ public class Main {
 
         while (it.hasNext()) {
             String name = it.next();
-            if (name.startsWith("I"))
+            if (name.startsWith("T"))
                 it.remove();
             else
                 System.out.println(name);
