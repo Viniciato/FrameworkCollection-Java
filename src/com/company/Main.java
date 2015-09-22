@@ -19,7 +19,7 @@ public class Main {
 
         while (it.hasNext()) {
             String name = it.next();
-            if(name.startsWith("K")){
+            if(name.startsWith("I")){
                 it.remove();
             }
             else
