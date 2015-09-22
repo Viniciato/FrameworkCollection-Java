@@ -19,13 +19,24 @@ public class Main {
 
         while (it.hasNext()) {
             String name = it.next();
-            if(name.startsWith("I")){
+            if (name.startsWith("B"))
                 it.remove();
-            }
-            else
-                System.out.println(name);
+            System.out.println(name);
         }
 
-        
+        it = mc.iterator();
+
+        System.out.println("------------");
+
+        while (it.hasNext()) {
+
+            System.out.println(it.next());
+
+        }
+//        it.remove();
+//        it.remove();
+//        System.out.println(mc.contains("Destruidor"));
+
+
     }
 }

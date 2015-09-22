@@ -1,9 +1,6 @@
 package com.company;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.function.Consumer;
 
 public class MyCollection extends BaseCollection {
 
@@ -15,31 +12,30 @@ public class MyCollection extends BaseCollection {
 	private class MyIterator implements Iterator<String>{
 
 		private Integer index = 0;
-		private Integer teste = 1;
-		private Integer count = 0;
+		private Integer count1= 1;
+		private Integer count2 = 0;
 
 		public boolean hasNext(){
-			return index < data.size();
+			return count1 + count2 < data.size()+1;
 		}
 
 		@Override
 		public String next() {
-			count++;
-
-			if (count == data.size())
-				index = data.size();
-
-			if (count % 2 == 1 && count != data.size()) {
-				return data.get(index++);
+			index++;
+			if (index % 2 == 1) {
+				return data.get(count2++);
 			}
 			else
-				return data.get(data.size()-teste++);
+				return data.get(data.size()-count1++);
 		}
 
 		@Override
 		public void remove() {
-			data.remove(index--);
-		}
-
+			if (index % 2 == 0)
+				data.remove(count2--);
+			else
+				data.remove(data.size()-count1--);
+			index++;
 	}
+}
 }
