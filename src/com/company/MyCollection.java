@@ -11,18 +11,18 @@ public class MyCollection extends BaseCollection {
 
 	private class MyIterator implements Iterator<String>{
 
-		private Integer index = 0;
-		private Integer count1= 1;
-		private Integer count2 = 0;
+		private boolean useCount2 = false;
+		private int count1 = 1;
+		private int count2 = 0;
 
 		public boolean hasNext(){
-			return count1 + count2 < data.size()+1;
+			return count1 + count2 < data.size() + 1;
 		}
 
 		@Override
 		public String next() {
-			index++;
-			if (index % 2 == 1) {
+			useCount2 = !useCount2;
+			if (useCount2) {
 				return data.get(count2++);
 			}
 			else
@@ -31,13 +31,13 @@ public class MyCollection extends BaseCollection {
 
 		@Override
 		public void remove() {
-			if (count1 - count2 % 2 == 1) {
-				data.remove(count2-1);
+			if (useCount2){
+				data.remove(count2 - 1);
 				count2--;
 			}
 			else{
-				data.remove(data.size()-(count1-1));
-				count1--;
+				data.remove(data.size() - count1 + 1);
+				count1++;
 			}
 	}
 }
