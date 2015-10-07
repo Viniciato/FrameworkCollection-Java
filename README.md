@@ -8,11 +8,11 @@ The iterator takes as input values:
 *  "Insano"
 *  "Juízo Final"
 *  "Tsunami"
-And returns through the modified iterator:
+## And returns through the modified iterator:
 *  "Bandido"
 *  "Tsunami"
 *  "Bodacious"
 *  "Juízo Final"
 *  "Mascherano"
 *  "Destruidor"
-Removing the name that has initial letter 'I'
+## Removing the name that has initial letter 'I'
