@@ -1,6 +1,7 @@
 # FrameWork-Collection-Java
 Example of a alternate iterator in Java
-The iterator takes as input values:
+
+### The iterator takes as input values:
 
 *  "Bandido"
 *  "Bodacious"
@@ -9,8 +10,8 @@ The iterator takes as input values:
 *  "Insano"
 *  "Juízo Final"
 *  "Tsunami"
-*  
-## And returns through the modified iterator:
+
+### And returns through the modified iterator:
 
 *  "Bandido"
 *  "Tsunami"
@@ -19,4 +20,4 @@ The iterator takes as input values:
 *  "Mascherano"
 *  "Destruidor"
 
-## Removing the name that has initial letter 'I'
+### Removing the name that has initial letter 'I'
