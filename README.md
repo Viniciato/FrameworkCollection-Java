@@ -11,7 +11,7 @@ Example of a alternate iterator in Java
 *  "Juízo Final"
 *  "Tsunami"
 
-### And returns through the modified iterator:
+### And returns through the modified iterator, removing the name that has initial letter 'I'
 
 *  "Bandido"
 *  "Tsunami"
@@ -19,5 +19,3 @@ Example of a alternate iterator in Java
 *  "Juízo Final"
 *  "Mascherano"
 *  "Destruidor"
-
-### Removing the name that has initial letter 'I'
